@@ -23,6 +23,11 @@
       <version>4.0.1</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>com.google.googlejavaformat</groupId>
+      <artifactId>google-java-format</artifactId>
+      <version>1.8</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -34,8 +39,42 @@
         <artifactId>appengine-maven-plugin</artifactId>
         <version>2.2.0</version>
         <configuration>
-          <deploy.projectId>eloquent-clover-279821</deploy.projectId>
+          <deploy.projectId>scheduletasks</deploy.projectId>
           <deploy.version>1</deploy.version>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.cosium.code</groupId>
+        <artifactId>git-code-format-maven-plugin</artifactId>
+        <version>2.5</version>
+        <executions>
+          <execution>
+            <id>install-formatter-hook</id>
+            <goals>
+              <goal>install-hooks</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>validate-code-format</id>
+            <goals>
+              <goal>validate-code-format</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.cosium.code</groupId>
+        <artifactId>git-code-format-maven-plugin</artifactId>
+        <version>2.5</version>
+        <executions>
+        </executions>
+        <configuration>
+          <googleJavaFormatOptions>
+            <aosp>false</aosp>
+            <fixImportsOnly>false</fixImportsOnly>
+            <skipSortingImports>false</skipSortingImports>
+            <skipRemovingUnusedImports>false</skipRemovingUnusedImports>
+          </googleJavaFormatOptions>
         </configuration>
       </plugin>
     </plugins>
