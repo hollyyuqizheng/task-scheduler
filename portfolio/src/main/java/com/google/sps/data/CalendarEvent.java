@@ -3,12 +3,12 @@ package com.google.sps.data;
 /** Models a calendar event that the user creates. */
 public class CalendarEvent {
   private final String name;
-  private final Long startTime;
-  private final Long endTime;
+  private final String startTime;
+  private final String endTime;
 
   // TODO: does an event need an ID?
 
-  public CalendarEvent(String name, Long startTime, Long endTime) {
+  public CalendarEvent(String name, String startTime, String endTime) {
     if (startTime == null) {
       throw new IllegalArgumentException("Event needs a start time");
     }
@@ -24,11 +24,11 @@ public class CalendarEvent {
     return name;
   }
 
-  public Long getStartTime() {
+  public String getStartTime() {
     return startTime;
   }
 
-  public Long getEndTime() {
+  public String getEndTime() {
     return endTime;
   }
 }

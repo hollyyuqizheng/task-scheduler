@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Task Scheduler</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
   integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
@@ -63,12 +64,12 @@
       <input type="text" id="new-event-name" name="new-event-name"><br>
       <span>
       <label for="new-event-start-time">Start time:</label>
-      <input type="time" id="new-event-start-time" name="new-event-end-time" value="09:00:00">
+      <input type="time" id="new-event-start-time" name="new-event-end-time" value="09:00">
       </span>    
       <br> 
       <span> 
       <label for="new-event-end-time">End time:</label>
-      <input type="time" id="new-event-end-time" name="new-event-end-time" value="20:00:00">
+      <input type="time" id="new-event-end-time" name="new-event-end-time" value="20:00">
       </span>
       <br> 
       <button type="button" class="btn btn-primary" onclick="createNewCalendarEvent()">Add this task</button>
@@ -77,9 +78,11 @@
   
   <div id="new-event-list-wrapper">
     <h2>Events added:</h2>
+    <h3 id="event-end-time-warning">End time must be later than start time.</h3> 
     <ol id="new-event-list"></ol> 
   </div>
   
+  <button type="button" class="btn btn-primary">Start scheduling!</button>
     
   <div id="schedule-result-wrapper">
     <h2>Your tasks are scheduled!</h2>
