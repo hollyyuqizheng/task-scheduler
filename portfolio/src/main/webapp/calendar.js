@@ -8,8 +8,8 @@ class CalendarEvent{
 
 /** 
  * Onclick function for "Add this event" button.
- * Retrievs the new event's name, start and end times, and creates a new 
- * CalendarEvent from these information. Adds the new event to the 
+ * Retrieves the new event's name, start and end times, and creates a new 
+ * CalendarEvent from this information. Adds the new event to the 
  * event list. 
  */
 function createNewCalendarEvent() {
