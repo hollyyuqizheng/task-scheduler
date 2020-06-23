@@ -1,17 +1,14 @@
 package com.google.sps.data;
 
-/**
- * Models a calendar event that the user creates. 
- */ 
-
-public class Event {
+/** Models a calendar event that the user creates. */
+public class CalendarEvent {
   private final String name;
-  private final long startTime; 
-  private final long endTime;
+  private final Long startTime;
+  private final Long endTime;
 
-  //TODO: does an event need an ID? 
+  // TODO: does an event need an ID?
 
-  public Event(String name, long startTime, long endTime) {
+  public CalendarEvent(String name, Long startTime, Long endTime) {
     if (startTime == null) {
       throw new IllegalArgumentException("Event needs a start time");
     }
@@ -20,18 +17,18 @@ public class Event {
     }
     this.name = name;
     this.startTime = startTime;
-    this.endTime = endTime; 
+    this.endTime = endTime;
   }
 
   public String getName() {
-    return name; 
+    return name;
   }
 
-  public long getStartTime() {
-    return startTime; 
+  public Long getStartTime() {
+    return startTime;
   }
 
-  public long getEndTime() {
-    return endTime; 
+  public Long getEndTime() {
+    return endTime;
   }
 }

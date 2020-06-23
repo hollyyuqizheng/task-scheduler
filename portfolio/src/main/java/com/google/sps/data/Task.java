@@ -1,44 +1,39 @@
 package com.google.sps.data;
 
-/**
- * Models a task that the user creates. 
- */ 
-
+/** Models a task that the user creates. */
 public final class Task {
 
-  private final String name; 
-  private final String description; 
-  private final int durationMinute;
-  private final int priority; 
+  private final String name;
+  private final String description;
+  private final Integer durationMinute;
+  private final Integer priority;
 
-  //TODO: does a task need an ID? 
+  // TODO: does a task need an ID?
 
-  public Task(String name, String description, int durationMinute, int priority) {
+  public Task(String name, String description, Integer durationMinute, Integer priority) {
     if (durationMinute == null) {
       throw new IllegalArgumentException("Task needs a duration");
     }
 
     this.name = name;
-    this.description = description; 
+    this.description = description;
     this.durationMinute = durationMinute;
-    this.priority = priority; 
+    this.priority = priority;
   }
 
-
   public String getName() {
-    return name; 
+    return name;
   }
 
   public String getDescription() {
-    return description; 
+    return description;
   }
 
-  public int getDurationMinute() {
+  public Integer getDurationMinute() {
     return durationMinute;
   }
 
-  public int getPriority() {
-    return priority; 
+  public Integer getPriority() {
+    return priority;
   }
-
 }
