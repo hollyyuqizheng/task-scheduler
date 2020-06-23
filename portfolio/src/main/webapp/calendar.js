@@ -35,7 +35,6 @@ function createNewCalendarEvent() {
     const newEventJson = JSON.stringify(newCalendarEvent);
     fetch('/calendarServlet', {method: 'POST', body: newEventJson});
   }
-
 }
 
 /** Creates a single element for a new calendar event. */
